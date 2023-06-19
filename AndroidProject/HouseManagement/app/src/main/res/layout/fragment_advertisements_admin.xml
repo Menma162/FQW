@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
+    tools:context=".fragments.AdvertisementsAdminFragment">
+
+    <FrameLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/shadow"
+        android:translationZ="100dp"/>
+    <LinearLayout
+        android:id="@+id/advertisements"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:translationZ="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Добавить объявление"
+                android:textStyle="italic"
+                style="@style/HeaderStyle"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdd"
+                android:layout_marginStart="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/add_complaint"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/advertisementsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/single_complaint"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/advertisement"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:translationZ="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="13dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:background="@drawable/baseline_close_24"/>
+            <TextView
+                android:id="@+id/advertisementName"
+                android:text="Объявление от 22-34-2342"
+                android:layout_gravity="left"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+            <TextView
+                android:id="@+id/nameHouseTextView"
+                android:text="Дом - 23"
+                android:layout_gravity="left"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+            <TextView
+                android:text="Описание"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/advertisementDescription"
+                style="@style/InputEditTextStyle"
+                android:maxLength="300"
+                android:layout_height="220dp"
+                android:text="3424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243234243232342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432342432323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424323424322"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnWork"
+                style="@style/BigGreenButtonStyle2"
+                android:layout_margin="10dp"
+                android:text="создать объявление"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnWDelete"
+                style="@style/BigGreenButtonStyle"
+                android:layout_margin="10dp"
+                android:text="Удалить объявление"/>
+        </LinearLayout>
+
+    </FrameLayout>
+    </ScrollView>
+
+</FrameLayout>

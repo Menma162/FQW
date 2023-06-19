@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
+    tools:context=".fragments.IndicationsFragment">
+    <FrameLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/shadow"
+        android:translationZ="100dp"/>
+    <LinearLayout
+        android:id="@+id/counters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:translationZ="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="История показаний"
+                android:textStyle="italic"
+                style="@style/HeaderStyle"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnStory"
+                android:layout_marginStart="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/hand_document_list_paper_file_icon"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/single_counter"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/indication"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:translationZ="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="13dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:background="@drawable/baseline_close_24"/>
+            <TextView
+                android:id="@+id/counterName"
+                android:text="Счетчик холодной воды"
+                android:layout_gravity="left"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+                <TextView
+                    android:id="@+id/flatNumber"
+                    android:text="Квартира №66"
+                    android:layout_gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"
+                    style="@style/HeaderStyle"/>
+                <TextView
+                    android:id="@+id/counterNumber"
+                    android:text="Счетчик №663456"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/HeaderStyle"/>
+
+            <TextView
+                android:id="@+id/lastIndication"
+                android:text="Последнее показание - 243"
+                android:layout_gravity="left"
+                android:layout_marginBottom="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+            <TextView
+                android:text="Новое показание"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:background="@color/grey_2">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextIndication"
+                        style="@style/EditTextStyle"
+                        android:layout_width="150dp"
+                        android:layout_margin="5dp"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:text="37624"
+                        android:textSize="25sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPlus"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/plus"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMinus"
+                    android:layout_width="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/minus"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTransfer"
+                style="@style/BigGreenButtonStyle2"
+                android:layout_margin="10dp"
+                android:text="Внести показания"/>
+        </LinearLayout>
+
+    </FrameLayout>
+    </ScrollView>
+</FrameLayout>

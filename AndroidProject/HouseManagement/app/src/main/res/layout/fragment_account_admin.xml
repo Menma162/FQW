@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
+    tools:context=".fragments.AccountAdminFragment">
+
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        android:padding="15dp">
+        <TextView
+            style="@style/HeaderStyle"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:text="Администратор"/>
+
+
+        <TextView
+            android:id="@+id/email"
+            style="@style/HeaderStyle"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:text=""/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editEmail"
+            style="@style/BigGreenButtonStyle2"
+            android:layout_marginBottom="10dp"
+            android:text="Редактировать email"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editPassword"
+            style="@style/BigGreenButtonStyle2"
+            android:layout_marginBottom="10dp"
+            android:text="Изменить пароль"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exit"
+            style="@style/BigGreenButtonStyle"
+            android:layout_marginBottom="10dp"
+            android:text="Выйти"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/shadow"
+        android:visibility="visible"
+        android:translationZ="100dp"/>
+
+    <ScrollView
+        android:id="@+id/editProfileLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_gravity="bottom">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:translationZ="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="13dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/baseline_close_24"/>
+
+                <LinearLayout
+                    android:id="@+id/emailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.utils.widget.MotionLabel
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:paddingStart="40dp"
+                        android:text="Email"
+                        android:textSize="18sp"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp">
+
+                        <EditText
+                            android:id="@+id/editTextEmail"
+                            style="@style/EditTextStyle2" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/passwordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.utils.widget.MotionLabel
+                        android:layout_width="wrap_content"
+                        android:id="@+id/labelPassword"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="40dp"
+                        android:text="Пароль"
+                        android:textSize="18sp"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+                        <EditText
+                            android:id="@+id/editTextPassword"
+                            style="@style/EditTextStyle2" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.constraintlayout.utils.widget.MotionLabel
+                        android:layout_width="wrap_content"
+                        android:text="Повторите пароль"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="40dp"
+                        android:textSize="18sp"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp">
+
+                        <EditText
+                            android:id="@+id/editTextRePassword"
+                            style="@style/EditTextStyle2" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEdit"
+                    style="@style/BigGreenButtonStyle2"
+                    android:layout_margin="10dp"
+                    android:text="Сохранить"/>
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/page_bg"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ComplaintsAdminFragment">
+
+    <FrameLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/shadow"
+        android:visibility="visible"
+        android:translationZ="100dp"/>
+    <LinearLayout
+        android:id="@+id/complaints"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:translationZ="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/complaintsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/single_complaint"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/complaint"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_gravity="bottom">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:translationZ="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="13dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:background="@drawable/baseline_close_24"/>
+            <TextView
+                android:id="@+id/dateComplaint"
+                android:text="Заявка от 22-34-2342"
+                android:layout_gravity="left"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+            <TextView
+                android:id="@+id/nameHouseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Дом - 2"
+                android:layout_gravity="left"
+                android:layout_marginBottom="10dp"
+                style="@style/HeaderStyle"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/numberFlatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Квартира №54"
+                android:layout_gravity="left"
+                android:layout_marginBottom="10dp"
+                style="@style/HeaderStyle"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Статус заявки"
+                android:layout_gravity="left"
+                android:layout_marginBottom="2dp"
+                style="@style/HeaderStyle"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/statusComplaintSpinner"
+                style="@style/spinner_style"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:entries="@array/statusesComplaint"/>
+            <TextView
+                android:text="Описание"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HeaderStyle"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionComplaint"
+                style="@style/InputEditTextStyle"
+                android:maxLength="150"
+                android:enabled="false"
+                android:text="3424323424"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/photoTextView"
+                    android:text="Фото"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/HeaderStyle"/>
+                <ImageView
+                    android:id="@+id/photoComplaint"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnComplaint"
+                style="@style/BigGreenButtonStyle2"
+                android:layout_margin="10dp"
+                android:text="Сохранить заявку"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDeleteComplaint"
+                style="@style/BigGreenButtonStyle2"
+                android:layout_margin="10dp"
+                android:text="Удалить заявку"/>
+        </LinearLayout>
+
+    </FrameLayout>
+    </ScrollView>
+
+</FrameLayout>

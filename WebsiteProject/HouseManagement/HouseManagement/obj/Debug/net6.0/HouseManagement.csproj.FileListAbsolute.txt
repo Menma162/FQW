@@ -1,0 +1,66 @@
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.csproj.AssemblyReference.cache
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.AssemblyInfoInputs.cache
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.AssemblyInfo.cs
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.csproj.CoreCompileInputs.cache
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.RazorAssemblyInfo.cache
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.RazorAssemblyInfo.cs
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\appsettings.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.staticwebassets.runtime.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.exe
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.deps.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.runtimeconfig.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.dll
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.pdb
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.HouseManagement.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.build.HouseManagement.props
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.HouseManagement.props
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.HouseManagement.props
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\scopedcss\bundle\HouseManagement.styles.css
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\scopedcss\projectbundle\HouseManagement.bundle.scp.css
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.csproj.CopyComplete
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.dll
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\refint\HouseManagement.dll
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.pdb
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.genruntimeconfig.cache
+C:\Users\lisak\diplom-polina\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\ref\HouseManagement.dll
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\appsettings.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.staticwebassets.runtime.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.exe
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.deps.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.runtimeconfig.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.dll
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\HouseManagement.pdb
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.csproj.AssemblyReference.cache
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.AssemblyInfoInputs.cache
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.AssemblyInfo.cs
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.csproj.CoreCompileInputs.cache
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.RazorAssemblyInfo.cache
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.RazorAssemblyInfo.cs
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.HouseManagement.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.build.HouseManagement.props
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.HouseManagement.props
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.HouseManagement.props
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\scopedcss\bundle\HouseManagement.styles.css
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\scopedcss\projectbundle\HouseManagement.bundle.scp.css
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.csproj.CopyComplete
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.dll
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\refint\HouseManagement.dll
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.pdb
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\HouseManagement.genruntimeconfig.cache
+C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\obj\Debug\net6.0\ref\HouseManagement.dll

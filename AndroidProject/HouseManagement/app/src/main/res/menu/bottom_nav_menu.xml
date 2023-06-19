@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Главная"
+        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/home"/>
+    <item android:title="Начисления"
+        android:icon="@drawable/baseline_payment_24"
+        android:id="@+id/payments"/>
+    <item android:title="Показания"
+        android:icon="@drawable/baseline_counter_24"
+        android:id="@+id/indications"/>
+    <item android:title="Заявки"
+        android:icon="@drawable/baseline_chat_24"
+        android:id="@+id/complaints"/>
+    <item android:title="Профиль"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:id="@+id/account"/>
+</menu>
