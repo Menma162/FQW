@@ -8,7 +8,6 @@ public class SettingsService {
     @PrimaryKey
     private Integer id;
     private Integer idService;
-    private boolean paymentStatus;
     private boolean typeIMD;
     private Double valueRate;
     private Double valueNormative;
@@ -17,10 +16,9 @@ public class SettingsService {
     private Integer endDateTransfer;
     private String paymentPeriod;
 
-    public SettingsService(Integer id, Integer idService, boolean paymentStatus, boolean typeIMD, Double valueRate, Double valueNormative, boolean haveCounter, Integer startDateTransfer, Integer endDateTransfer, String paymentPeriod) {
+    public SettingsService(Integer id, Integer idService, boolean typeIMD, Double valueRate, Double valueNormative, boolean haveCounter, Integer startDateTransfer, Integer endDateTransfer, String paymentPeriod) {
         this.id = id;
         this.idService = idService;
-        this.paymentStatus = paymentStatus;
         this.typeIMD = typeIMD;
         this.valueRate = valueRate;
         this.valueNormative = valueNormative;
@@ -39,14 +37,6 @@ public class SettingsService {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public boolean isPaymentStatus() {
-        return paymentStatus;
-    }
-
-    public void setPaymentStatus(boolean paymentStatus) {
-        this.paymentStatus = paymentStatus;
     }
     public Double getValueRate() {
         return valueRate;

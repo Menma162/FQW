@@ -202,9 +202,8 @@ namespace HouseManagement.Controllers
                 ViewBag.IdCounter = idCounter;
 
                 var resultCounter = await ApiGetRequests.LoadCounterFromAPIAsync(token, Urles.CounterUrl + $"/{idCounter}");
-                var counter = new Counter();
-                if (resultCounter.StatusCode == 200)
-                    counter = resultCounter.Item as Counter;
+                var counter = resultCounter.Item as Counter;
+                if (resultCounter.StatusCode != 200) return new NotFoundResult();
 
                 var resultService = await ApiGetRequests.LoadListServicesFromAPIAsync(token, Urles.ServicetUrl);
                 var resultLast = await ApiGetRequests.LoadIndicationFromAPIAsync(token, Urles.IndicationUrl + $"/lastmonthfromcounter/{idCounter}");
@@ -485,7 +484,8 @@ namespace HouseManagement.Controllers
                                 ViewBag.Name = services.First(it => it.id == counter.idService).nameCounter;
                                 ViewBag.Number = counter.number;
                                 ViewBag.Date = indication.dateTransfer.ToShortDateString();
-                                ViewBag.Message = "Невозможно удалить данные";
+                                if (result.StatusCode == 500 && result.Message != null) ViewBag.Message = result.Message;
+                                else ViewBag.Message = "Невозможно удалить данные";
                                 return View(indication);
                             }
                         }

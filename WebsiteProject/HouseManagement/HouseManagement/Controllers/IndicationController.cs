@@ -729,7 +729,8 @@ namespace HouseManagement.Controllers
                                 ViewBag.Name = services.First(it => it.id == counter.idService).nameCounter;
                                 ViewBag.Number = counter.number;
                                 ViewBag.Date = indication.dateTransfer.ToShortDateString();
-                                ViewBag.Message = "Невозможно удалить данные";
+                                if (result.StatusCode == 500 && result.Message != null) ViewBag.Message = result.Message;
+                                else ViewBag.Message = "Невозможно удалить данные";
                                 return View(indication);
                             }
                         }

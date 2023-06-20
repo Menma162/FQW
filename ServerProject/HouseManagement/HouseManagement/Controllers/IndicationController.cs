@@ -15,7 +15,6 @@ namespace HouseManagement.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class IndicationController : ControllerBase
     {
-        // GET: IndicationController
         private readonly DBContext _context;
 
         public IndicationController(DBContext context)
@@ -23,15 +22,7 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<IndicationController>
-        [HttpGet]
-        public IEnumerable<Indication> Get()
-        {
-
-            return _context.Indications;
-        }
-
-        // GET api/<IndicationController>/5
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("{id}")]
         public ActionResult<Indication> Get(int id)
         {
@@ -43,6 +34,7 @@ namespace HouseManagement.Controllers
             return item;
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("lastfromcounter/{id}")]
         public ActionResult<Indication?> GetLastByCouter(int id)
         {
@@ -50,6 +42,7 @@ namespace HouseManagement.Controllers
             return lastIndication;
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("lastfromflat/{id}")]
         public IEnumerable<Indication> GetLastByFlat(int id)
         {
@@ -63,6 +56,7 @@ namespace HouseManagement.Controllers
             return indications;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("lastfromadmin/{id}")]
         public IEnumerable<Indication> GetLastByAdmin(string id)
         {
@@ -89,6 +83,7 @@ namespace HouseManagement.Controllers
             return indications;
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("lastfromhouse/{id}")]
         public IEnumerable<Indication> GetLastByHouse(int id)
         {
@@ -102,6 +97,7 @@ namespace HouseManagement.Controllers
             return indications;
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("lastmonthfromcounter/{id}")]
         public ActionResult<Indication?> GetLastMonthByCouter(int id)
         {
@@ -117,6 +113,7 @@ namespace HouseManagement.Controllers
             return lastIndication;
         }
 
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("flatowner/{id}")]
         public IEnumerable<Indication> GetIndicationsByIdFlat(int id)
         {
@@ -134,16 +131,18 @@ namespace HouseManagement.Controllers
             return indications;
         }
 
-        [HttpGet("house/{id}")]
-        public IEnumerable<Indication> GetIndicationsByHouse(int id)
-        {
-            var counters = _context.Counters.Where(it => it.idHouse == id);
-            List<Indication> indications = new();
-            foreach (var counter in counters)
-                indications.AddRange(_context.Indications.Where(it => it.idCounter == counter.id).ToList());
-            return indications;
-        }
+        //[Authorize(Roles = "FlatOwner,HouseAdmin")]
+        //[HttpGet("house/{id}")]
+        //public IEnumerable<Indication> GetIndicationsByHouse(int id)
+        //{
+        //    var counters = _context.Counters.Where(it => it.idHouse == id);
+        //    List<Indication> indications = new();
+        //    foreach (var counter in counters)
+        //        indications.AddRange(_context.Indications.Where(it => it.idCounter == counter.id).ToList());
+        //    return indications;
+        //}
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<Indication> GetIndicationsByAdmin(string id)
         {
@@ -159,6 +158,7 @@ namespace HouseManagement.Controllers
             return indications;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("summary/{id}")]
         public IEnumerable<SummaryData> GetSummaryIndicationsByAdminSumma(string id)
         {
@@ -200,7 +200,7 @@ namespace HouseManagement.Controllers
                         {
                             summ += indications.Where(it => it.idCounter == counter.id).Sum(it => it.value);
                         }
-                        summaries.Add(new SummaryData(service.nameService, house.name, summ, getUnit(service.nameService)));
+                        summaries.Add(new SummaryData(service.nameService, house.name, summ, GetUnit(service.nameService)));
                     }
                     else
                     {
@@ -210,14 +210,14 @@ namespace HouseManagement.Controllers
                         {
                             summ += indications.Where(it => it.idCounter == counter.id).Sum(it => it.value);
                         }
-                        summaries[index] = new SummaryData(service.nameService, house.name, summ, getUnit(service.nameService));
+                        summaries[index] = new SummaryData(service.nameService, house.name, summ, GetUnit(service.nameService));
                     }
                 }
             }
             return summaries;
         }
 
-        private string getUnit(string name)
+        private string GetUnit(string name)
         {
             string unit = "";
             switch (name)
@@ -241,6 +241,7 @@ namespace HouseManagement.Controllers
             return unit;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("month/{month}/year/{year}/flat/{id}")]
         public IEnumerable<Indication> GetIndicationsByDateFlat(int id, int month, int year)
         {
@@ -251,6 +252,7 @@ namespace HouseManagement.Controllers
             return indications;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("month/{month}/year/{year}/house/{id}")]
         public IEnumerable<Indication> GetIndicationsByDateHouse(int id, int month, int year)
         {
@@ -265,7 +267,7 @@ namespace HouseManagement.Controllers
             return indications;
         }
 
-        // POST api/<IndicationController>
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPost]
         public ActionResult Post(Indication item)
         {
@@ -308,7 +310,7 @@ namespace HouseManagement.Controllers
             return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month) + " " + year.ToString();
         }
 
-        // POST api/<IndicationController>
+        [Authorize(Roles = "FlatOwner")]
         [HttpPost("fromOwner")]
         public ActionResult PostFromOwner(Indication item)
         {
@@ -339,8 +341,7 @@ namespace HouseManagement.Controllers
             else return BadRequest();
         }
 
-        // PUT api/<IndicationController>/5
-
+        [Authorize(Roles = "FlatOwner")]
         [HttpPut("fromOwner/{id}")]
         public ActionResult<Indication> PutFromOwner(int id, Indication item)
         {
@@ -381,6 +382,8 @@ namespace HouseManagement.Controllers
                    Message = "Текущее показание должно быть больше предыдущего"
                });
         }
+
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPut("{id}")]
         public ActionResult<Indication> Put(int id, Indication item)
         {
@@ -415,7 +418,7 @@ namespace HouseManagement.Controllers
             else return StatusCode(StatusCodes.Status500InternalServerError);
         }
 
-        // DELETE api/<IndicationController>/5
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {

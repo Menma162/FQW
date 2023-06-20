@@ -305,7 +305,7 @@ namespace HouseManagement.Controllers
             else if (result.StatusCode == 500 && result.Message != null) ViewBag.Message = result.Message;
             else ViewBag.Message = "Не удалось изменить владельцев для квартиры";
 
-            var resultFlatOwner = await ApiGetRequests.LoadListFlatOwnersFromAPIAsync(token, Urles.ResidenceUrl + $"/havenoFlat/{UserProperties.GetIdUser(ref context)}");
+            var resultFlatOwner = await ApiGetRequests.LoadListFlatOwnersFromAPIAsync(token, Urles.ResidenceUrl + $"/{idFlat}/{UserProperties.GetIdUser(ref context)}");
             List<FlatOwner> flatOwners = resultFlatOwner.Item as List<FlatOwner>;
             if (resultFlatOwner.StatusCode != 200 || flatOwners == null) return new NotFoundResult();
 

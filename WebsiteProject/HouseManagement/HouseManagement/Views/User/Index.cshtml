@@ -79,8 +79,11 @@ else
                 }
                 <td class="table-light">
                     @for (int q = 0; q < ViewBag.NamesHouses[i].Count; q++)
+                    {
                         @Html.Label("", ViewBag.NamesHouses[i][q], htmlAttributes: new { @class = "control-label" })
-
+                        <br>
+                    }
+                        
                     </td>
                     @if (User.IsInRole("MainAdmin"))
                 {

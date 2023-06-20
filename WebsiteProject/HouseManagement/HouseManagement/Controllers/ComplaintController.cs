@@ -24,9 +24,6 @@ namespace HouseManagement.Controllers
 
             var resultComplaint = await ApiGetRequests.LoadListComplaintsFromAPIAsync(token, Urles.ComplaintUrl + url);
             List<Complaint>? complaints = resultComplaint.Item as List<Complaint>;
-
-            //var resultComplaintPhoto = await ApiGetRequests.LoadListStringPhotosAPIAsync(token, Urles.ComplaintUrl + "/getPhotos" + url);
-            //List<string>? photos = resultComplaintPhoto.Item as List<string>;
             List<string>? photos = new();
 
             var resultFlat = await ApiGetRequests.LoadListFlatsFromAPIAsync(token, Urles.FlatUrl + url);

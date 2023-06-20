@@ -64,8 +64,6 @@ interface Dao {
     fun insertServices (services: List<Service>)
     @Insert
     fun insertSettingsServices (settingsServices: List<SettingsService>)
-    @Insert
-    fun insertPhotos (photos: List<Photo>)
 
     @Update
     fun updateUser(user: User)

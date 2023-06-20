@@ -13,7 +13,6 @@ namespace HouseManagement.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class FlatController : ControllerBase
     {
-        // GET: FlatController
         private readonly DBContext _context;
 
         public FlatController(DBContext context)
@@ -21,19 +20,14 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<FlatController>
-        [HttpGet]
-        public IEnumerable<Flat> Get()
-        {
-            return _context.Flats;
-        }
-
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/{id}")]
         public IEnumerable<Flat> GetByHouse(int id)
         {
             return _context.Flats.Where(it => it.idHouse == id);
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<Flat> GetByUserAdmin(string id)
         {
@@ -46,7 +40,7 @@ namespace HouseManagement.Controllers
             return flats;
         }
 
-        // GET api/<FlatController>/5
+        [Authorize(Roles = "HouseAdmin,FlatOwner")]
         [HttpGet("{id}")]
         public ActionResult<Flat> Get(int id)
         {
@@ -58,6 +52,7 @@ namespace HouseManagement.Controllers
             return item;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/usablearea/{id}")]
         public double GetUsableAreaHouse(int id)
         {
@@ -68,7 +63,7 @@ namespace HouseManagement.Controllers
             return amount;
         }
 
-
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/people/{id}")]
         public int GetCountPeople(int id)
         {
@@ -82,6 +77,7 @@ namespace HouseManagement.Controllers
             return count;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/totalarea/{id}")]
         public double GetTotalAreaHouse(int id)
         {
@@ -92,6 +88,7 @@ namespace HouseManagement.Controllers
             return amount;
         }
 
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("flatowner/{id}")]
         public IEnumerable<Flat> GetByIdFlatOwner(int id)
         {
@@ -102,7 +99,7 @@ namespace HouseManagement.Controllers
             return flats;
         }
 
-        //POST api/<FlatController>
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPost]
         public ActionResult Post(Flat item)
         {
@@ -125,7 +122,7 @@ namespace HouseManagement.Controllers
             return BadRequest();
         }
 
-        // PUT api/<FlatController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPut("{id}")]
         public ActionResult<Flat> Put(int id, Flat item)
         {
@@ -165,7 +162,7 @@ namespace HouseManagement.Controllers
            });
         }
 
-        // DELETE api/<FlatController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {

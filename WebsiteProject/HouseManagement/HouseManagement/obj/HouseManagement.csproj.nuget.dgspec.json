@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tiuri\\OneDrive\\Рабочий стол\\Диплом\\web-mvc\\HouseManagement\\HouseManagement\\HouseManagement.csproj": {}
+    "D:\\FQW\\WebsiteProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tiuri\\OneDrive\\Рабочий стол\\Диплом\\web-mvc\\HouseManagement\\HouseManagement\\HouseManagement.csproj": {
+    "D:\\FQW\\WebsiteProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tiuri\\OneDrive\\Рабочий стол\\Диплом\\web-mvc\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
+        "projectUniqueName": "D:\\FQW\\WebsiteProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
         "projectName": "HouseManagement",
-        "projectPath": "C:\\Users\\tiuri\\OneDrive\\Рабочий стол\\Диплом\\web-mvc\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
+        "projectPath": "D:\\FQW\\WebsiteProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
         "packagesPath": "C:\\Users\\tiuri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tiuri\\OneDrive\\Рабочий стол\\Диплом\\web-mvc\\HouseManagement\\HouseManagement\\obj\\",
+        "outputPath": "D:\\FQW\\WebsiteProject\\HouseManagement\\HouseManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"

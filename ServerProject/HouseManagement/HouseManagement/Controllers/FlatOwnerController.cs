@@ -24,14 +24,7 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<FlatOwnerController>
-        [HttpGet]
-        public IEnumerable<FlatOwner> Get()
-        {
-            return _context.FlatOwners;
-        }
-
-        // GET api/<FlatOwnerController>/5
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("{id}")]
         public ActionResult<FlatOwner> Get(int id)
         {
@@ -43,12 +36,14 @@ namespace HouseManagement.Controllers
             return flatOwner;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/{id}")]
         public IEnumerable<FlatOwner> GetByHouse(int id)
         {
             return _context.FlatOwners.Where(it => it.idHouse == id);
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<FlatOwner> GetByAdminHouses(string id)
         {
@@ -61,12 +56,13 @@ namespace HouseManagement.Controllers
             return flatOwners;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/haveNotUser/{id}")]
         public async Task<IEnumerable<FlatOwner>> GetByHouseHaveNotUserAsync(int id)
         {
             var flatOwners = _context.FlatOwners.Where(it => it.idHouse == id && it.email != null).ToList();
             var newFlatOwners = new List<FlatOwner>();
-            foreach(var flatOwner in flatOwners)
+            foreach (var flatOwner in flatOwners)
             {
                 var user = await userManager.FindByNameAsync(flatOwner.email);
                 if (user == null) newFlatOwners.Add(flatOwner);
@@ -74,8 +70,7 @@ namespace HouseManagement.Controllers
             return newFlatOwners;
         }
 
-        // POST api/<FlatOwnerController>
-        [Authorize(Roles = UserRoles.HouseAdmin)]
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPost]
         public async Task<ActionResult> PostAsync(FlatOwner flatOwner)
         {
@@ -89,7 +84,7 @@ namespace HouseManagement.Controllers
                     var userWithEmail = await userManager.FindByNameAsync(flatOwner.email);
                     if (userWithEmail != null) count++;
                 }
-                int countPhone = _context.FlatOwners.Where(it => it.phoneNumber == flatOwner.phoneNumber && it.idHouse != flatOwner.idHouse).Count();
+                int countPhone = _context.FlatOwners.Where(it => it.phoneNumber == flatOwner.phoneNumber && it.idHouse == flatOwner.idHouse).Count();
                 if (count == 0 && countPhone == 0)
                 {
                     _context.FlatOwners.Add(flatOwner);
@@ -114,7 +109,7 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // PUT api/<FlatOwnerController>/5
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpPut("{id}")]
         public async Task<ActionResult<FlatOwner>> PutAsync(int id, FlatOwner flatOwner)
         {
@@ -135,8 +130,8 @@ namespace HouseManagement.Controllers
             string? email = _context.FlatOwners.Where(it => it.id == flatOwner.id).Select(it => it.email).FirstOrDefault();
             int countPhone = _context.FlatOwners.Where(it => it.phoneNumber == flatOwner.phoneNumber && it.id != flatOwner.id && it.idHouse != flatOwner.idHouse).Count();
             ApplicationUser? userFromDb = null;
-            if(email != null) userFromDb = await userManager.FindByNameAsync(email);
-            
+            if (email != null) userFromDb = await userManager.FindByNameAsync(email);
+
             if (countPhone == 0 && count == 0)
             {
                 _context.Entry(flatOwner).State = EntityState.Modified;
@@ -176,8 +171,7 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // DELETE api/<FlatOwnerController>/5
-        [Authorize(Roles = UserRoles.HouseAdmin)]
+        [Authorize(Roles = "HouseAdmin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteAsync(int id)
         {

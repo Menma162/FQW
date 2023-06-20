@@ -61,8 +61,6 @@ public interface ApiRequests {
     Call<JsonPrimitive> getDateNow(@Header("Authorization") String token);
     @GET("/api/complaint/getPhotoMobile/{id}")
     Call<JsonPrimitive> getPhoto(@Header("Authorization") String token, @Path("id") Integer id);
-    @GET("/api/complaint/getPhotoMobile/admin/{id}")
-    Call<JsonArray> getPhotoByAdmin(@Header("Authorization") String token, @Path("id") String id);
     @GET("/api/complaint/getPhotoMobile/flatowner/{id}")
     Call<JsonArray> getPhotoByFlatOwner(@Header("Authorization") String token, @Path("id") Integer id);
     @POST("/api/complaint")
@@ -90,7 +88,4 @@ public interface ApiRequests {
     Call<JsonObject> putPhoto(@Header("Authorization") String token, @Path("id") Integer id, @Part MultipartBody.Part photo);
     @PUT("/api/user/password/{id}")
     Call<JsonObject> putUserPassword(@Header("Authorization") String token, @Path("id") String id, @Body UserToServer user);
-    @Multipart
-    @POST("api/complaint/uploadFile/{idHouse}/{idFlat}")
-    Call<ResponseBody> uploadPicture(@Header("Authorization") String token, @Part MultipartBody.Part part, @Path("idHouse") Integer idHouse,@Path("idFlat") Integer idFlat);
 }

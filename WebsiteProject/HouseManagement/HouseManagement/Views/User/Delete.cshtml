@@ -29,6 +29,7 @@
             @for(int i = 0; i < ViewBag.NamesHouses.Count; i++)
             {
                 @Html.Label("", "--" + ViewBag.NamesHouses[i] , htmlAttributes: new { @class = "control-label col-md-5" })
+                <br />
             }
         </dd>
     </dl>

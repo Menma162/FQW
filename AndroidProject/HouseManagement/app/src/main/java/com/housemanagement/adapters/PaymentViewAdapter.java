@@ -50,9 +50,8 @@ public class PaymentViewAdapter extends RecyclerView.Adapter<PaymentViewAdapter.
     public void onBindViewHolder(MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Payment currentItem = list.get(position);
         Service currentService = services.stream().filter (it -> Objects.equals(it.getId(), currentItem.getIdService())).findFirst().get();
-        SettingsService settingsService =  settingsServices.stream().filter(it -> Objects.equals(it.getIdService(), currentService.getId())).findFirst().get();
         holder.id = currentItem.getId();
-        holder.flat_number.setText("Квартира №"+ flats.stream().filter (it -> it.getId() == currentItem.getIdFlat()).findFirst().get().getFlatNumber());
+        holder.flat_number.setText("Квартира №"+ flats.stream().filter (it -> Objects.equals(it.getId(), currentItem.getIdFlat())).findFirst().get().getFlatNumber());
         holder.period.setText(currentItem.getPeriod());
         holder.service.setText(currentService.getNameService());
         holder.amount.setText("Начислено: " + currentItem.getAmount() + " руб");

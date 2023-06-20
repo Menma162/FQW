@@ -24,13 +24,14 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<HouseController>
+        [Authorize(Roles = "MainAdmin,HouseAdmin")]
         [HttpGet]
         public IEnumerable<House> Get()
         {
             return _context.Houses;
         }
 
+        [Authorize(Roles = "MainAdmin")]
         [HttpGet("notUses")]
         public IEnumerable<House> GetNotUses()
         {
@@ -38,6 +39,7 @@ namespace HouseManagement.Controllers
             return _context.Houses.Where(it => !idHouses.Any(p => it.id == p));
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("byuser/{id}")]
         public IEnumerable<House> GetByUser(string id)
         {
@@ -50,7 +52,6 @@ namespace HouseManagement.Controllers
             return houses;
         }
 
-        // GET api/<HouseController>/5
         [HttpGet("{id}")]
         public ActionResult<House> Get(int id)
         {
@@ -62,6 +63,7 @@ namespace HouseManagement.Controllers
             return item;
         }
 
+        [Authorize(Roles = "HouseAdmin,MainAdmin")]
         [HttpGet("names/{id}")]
         public ActionResult<string> GetNamesByUser(string id)
         {
@@ -74,7 +76,7 @@ namespace HouseManagement.Controllers
             return names;
         }
 
-        // POST api/<HouseController>
+        [Authorize(Roles = "MainAdmin")]
         [HttpPost]
         public ActionResult Post(House item)
         {
@@ -129,7 +131,7 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // PUT api/<HouseController>/5
+        [Authorize(Roles = "MainAdmin")]
         [HttpPut("{id}")]
         public ActionResult<House> Put(int id, House item)
         {
@@ -157,16 +159,15 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // DELETE api/<HouseController>/5
+        [Authorize(Roles = "MainAdmin")]
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteAsync(int id)
+        public ActionResult DeleteAsync(int id)
         {
             House itemFromBase = _context.Houses.Find(id);
             if (itemFromBase != null)
             {
                 int count = _context.Flats.Where(it => it.idHouse == id).Count();
                 count += _context.FlatOwners.Where(it => it.idHouse == id).Count();
-                count += _context.SettingsServices.Where(it => it.idHouse == id).Count();
                 count += _context.Counters.Where(it => it.idHouse == id).Count();
                 count += _context.Advertisements.Where(it => it.idHouse == id).Count();
                 count += _context.RelationshipHouses.Where(it => it.idHouse == id).Count();
@@ -175,6 +176,11 @@ namespace HouseManagement.Controllers
                     Status = "Error",
                     Message = "Удаление невозможно, так как у дома есть данные по квартирам или пользователям"
                 });
+                var settings= _context.SettingsServices.Where(it => it.idHouse == id);
+                foreach(var setting in settings)
+                {
+                    _context.SettingsServices.Remove(setting);
+                }
                 _context.Houses.Remove(itemFromBase);
                 _context.SaveChanges();
                 return StatusCode(StatusCodes.Status204NoContent);

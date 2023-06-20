@@ -32,7 +32,7 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<UserController>
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/houseAdmin/{id}")]
         public IEnumerable<UserModel> GetByHouseAdmin(string id)
         {
@@ -59,6 +59,7 @@ namespace HouseManagement.Controllers
             return users;
         }
 
+        [Authorize(Roles = "MainAdmin")]
         [HttpGet("house/mainAdmin")]
         public IEnumerable<UserModel> GetByMainAdmin()
         {
@@ -74,13 +75,13 @@ namespace HouseManagement.Controllers
             return users;
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("dateNow")]
         public DateTime GetDateNow()
         {
             return DateTime.Now;
         }
 
-        // GET api/<UserController>/5
         [HttpGet("{id}")]
         public ActionResult<UserModel> Get(string id)
         {
@@ -94,7 +95,6 @@ namespace HouseManagement.Controllers
             return BadRequest();
         }
 
-        // PUT api/<UserController>/5
         [HttpPut("password/{id}")]
         public ActionResult<UserModel> PutPassword(string id, UserModel item)
         {
@@ -119,7 +119,6 @@ namespace HouseManagement.Controllers
             return NoContent();
         }
 
-        // PUT api/<UserController>/5
         [HttpPut("login/{id}")]
         public ActionResult<UserModel> PutLogin(string id, UserModel item)
         {
@@ -176,7 +175,7 @@ namespace HouseManagement.Controllers
             return NoContent();
         }
 
-
+        [Authorize(Roles = "MainAdmin,HouseAdmin")]
         [HttpPost]
         public async Task<ActionResult<UserModel>> PostAsync(UserModel item)
         {
@@ -246,7 +245,7 @@ namespace HouseManagement.Controllers
             return Ok();
         }
 
-        // DELETE api/<UserController>/5
+        [Authorize(Roles = "MainAdmin,HouseAdmin")]
         [HttpDelete("{id}")]
         public ActionResult Delete(string id)
         {

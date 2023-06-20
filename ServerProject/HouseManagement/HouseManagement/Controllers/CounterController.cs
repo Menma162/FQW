@@ -13,7 +13,6 @@ namespace HouseManagement.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class CounterController : ControllerBase
     {
-        // GET: CounterController
         private readonly DBContext _context;
 
         public CounterController(DBContext context)
@@ -21,13 +20,7 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<CounterController>
-        [HttpGet]
-        public IEnumerable<Counter> Get()
-        {
-            return _context.Counters;
-        }
-
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<Counter> GetByAdminHouses(string id)
         {
@@ -40,6 +33,7 @@ namespace HouseManagement.Controllers
             return counters;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("untransmittedReadings/{id}")]
         public IEnumerable<Counter> GetByUntransmittedReadings(string id)
         {
@@ -75,7 +69,7 @@ namespace HouseManagement.Controllers
             return resultCounters;
         }
 
-        // GET api/<CounterController>/5
+        [Authorize(Roles = "HouseAdmin,FlatOwner")]
         [HttpGet("{id}")]
         public ActionResult<Counter> Get(int id)
         {
@@ -87,24 +81,28 @@ namespace HouseManagement.Controllers
             return item;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/{id}")]
         public IEnumerable<Counter> GetCountersByIdFlatHouse(int id)
         {
             return _context.Counters.Where(it => it.idHouse == id);
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("house/ghAndUsed/{id}")]
         public IEnumerable<Counter> GetCountersByIdGhHouse(int id)
         {
             return _context.Counters.Where(it => it.idHouse == id && it.IMDOrGHMD == false && it.used == true);
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("flat/{id}")]
         public IEnumerable<Counter> GetCountersByFlat(int id)
         {
             return _context.Counters.Where(it => it.idFlat == id && it.used == true);
         }
 
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("flatowner/{id}")]
         public IEnumerable<Counter> GetCountersByIdFlatAndUsed(int id)
         {
@@ -117,7 +115,7 @@ namespace HouseManagement.Controllers
             return counters;
         }
 
-        // POST api/<CounterController>
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPost]
         public ActionResult Post(Counter item)
         {
@@ -143,7 +141,8 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // PUT api/<CounterController>/5
+
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPut("{id}")]
         public ActionResult<Counter> Put(int id, Counter item)
         {
@@ -205,7 +204,8 @@ namespace HouseManagement.Controllers
                });
         }
 
-        // DELETE api/<CounterController>/5
+
+        [Authorize(Roles = "HouseAdmin")]
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {

@@ -12,7 +12,6 @@ import com.housemanagement.models.tables.FlatOwner
 import com.housemanagement.models.tables.House
 import com.housemanagement.models.tables.Indication
 import com.housemanagement.models.tables.Payment
-import com.housemanagement.models.tables.Photo
 import com.housemanagement.models.tables.Service
 import com.housemanagement.models.tables.SettingsService
 import com.housemanagement.models.tables.User
@@ -20,7 +19,7 @@ import com.housemanagement.models.tables.User
 @Database (entities = [Advertisement::class, Complaint::class, Counter::class,
                       Flat::class, FlatOwner::class, Indication::class,
                       Payment::class, Service::class, SettingsService::class,
-                      User::class, House::class, Photo::class], version = 23)
+                      User::class, House::class], version = 1)
 abstract class MainDb : RoomDatabase() {
     abstract fun getDao(): Dao
     companion object{

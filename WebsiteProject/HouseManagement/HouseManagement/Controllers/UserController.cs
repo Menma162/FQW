@@ -405,7 +405,7 @@ namespace HouseManagement.Controllers
             }
             return View(user);
         }
-        [Authorize(Roles = "HouseAdmin, MainAdmin")]
+        [Authorize(Roles = "HouseAdmin,MainAdmin")]
         public async Task<ActionResult> DeleteAsync(string? id)
         {
             if (id != null)
@@ -447,7 +447,7 @@ namespace HouseManagement.Controllers
             return new NotFoundResult();
         }
 
-        [Authorize(Roles = "HouseAdmin, MainAdmin")]
+        [Authorize(Roles = "HouseAdmin,MainAdmin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Delete(string id)

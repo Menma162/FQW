@@ -20,10 +20,6 @@
             @Html.DisplayName("Услуга")
             @Html.DropDownList("name", ViewBag.NamesFilters as SelectList, new { htmlAttributes = new { @class = "form-control" } })
             &nbsp;&nbsp;&nbsp;&nbsp;
-
-            @Html.DisplayName("Статус оплаты")
-            @Html.DropDownList("status", ViewBag.StatusesFilters as SelectList, new { htmlAttributes = new { @class = "form-control" } })
-            &nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             <input type="submit" value="Фильтровать" class="btn btn-success" />
@@ -48,9 +44,6 @@
         <th>
             @Html.DisplayNameFor(model => model.penalties)
         </th>
-        <th>
-            @Html.Label("", "Необходимо оплатить до", htmlAttributes: new { @class = "control-label" })
-        </th>
         <th></th>
     </tr>
     @{
@@ -73,10 +66,6 @@
             </td>
             <td class="table-light">
                 @Html.DisplayFor(modelItem => item.penalties)
-            </td>
-
-            <td class="table-light text-danger">
-                @Html.Label("", ViewBag.Dates[i] + " числа", htmlAttributes: new { @class = "control-label" })
             </td>
         </tr>
         i++;

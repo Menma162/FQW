@@ -13,7 +13,6 @@ import com.housemanagement.activities.MainActivity
 import com.housemanagement.activities.MainAdminActivity
 import com.housemanagement.db.MainDb
 import com.housemanagement.interfaces.ApiRequests
-import com.housemanagement.models.tables.Photo
 import com.housemanagement.models.tables.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -60,8 +59,6 @@ class GetDataFromServer {
             val role = userFromLogin.role
             if (role == "FlatOwner") {
                 getFlatOwner(user.idFlatOwner)
-                //getUser(this.username)
-                getPhotos(user.idFlatOwner)
                 getFlats(user.idFlatOwner)
                 getCounters(user.idFlatOwner)
                 getIndications(user.idFlatOwner)
@@ -404,75 +401,6 @@ class GetDataFromServer {
                     }
                 })
         }
-        private fun getPhotos(idFlatOwner: Int?) {
-            apiRequests.getPhotoByFlatOwner("Bearer ${user.token}", idFlatOwner)
-                .enqueue(object : Callback<JsonArray> {
-                    override fun onResponse(
-                        call: Call<JsonArray>,
-                        response: Response<JsonArray>
-                    ) {
-                        try {
-                            val array = response.body()
-                            val photos = ArrayList<Photo>()
-                            if (array != null) {
-                                for (item in array) {
-                                    var photot = gson.fromJson(
-                                        item.asJsonObject.get("array"),
-                                        String::class.java)
-                                    var photo2= gson.fromJson(
-                                        item.asJsonObject.get("array"),
-                                        ByteArray::class.java)
-                                    var d = 0
-                                    val photo =  gson.fromJson(
-                                            item.asJsonObject,
-                                        Photo::class.java)
-                                    photos.add(photo)
-                                }
-                                lifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
-                                    db.getDao().insertPhotos(photos)
-                                }
-                            }
-                        } catch (ex: Exception) {
-                            //error()
-                        }
-                    }
-
-                    override fun onFailure(call: Call<JsonArray>, t: Throwable) {
-                        //error()
-                    }
-                })
-        }
-//        private fun getPhotos(idUser: String?) {
-//            apiRequests.getPhotoByFlatOwner("Bearer ${user.token}", idUser)
-//                .enqueue(object : Callback<JsonArray> {
-//                    override fun onResponse(
-//                        call: Call<JsonArray>,
-//                        response: Response<JsonArray>
-//                    ) {
-//                        try {
-//                            val array = response.body()
-//                            val photos = ArrayList<Photo>()
-//                            if (array != null) {
-//                                for (item in array) {
-//                                    val photo =  gson.fromJson(
-//                                        item.asJsonObject,
-//                                        Photo::class.java)
-//                                    photos.add(photo)
-//                                }
-//                                lifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
-//                                    db.getDao().insertPhotos(photos)
-//                                }
-//                            }
-//                        } catch (ex: Exception) {
-//                            //error()
-//                        }
-//                    }
-//
-//                    override fun onFailure(call: Call<JsonArray>, t: Throwable) {
-//                        //error()
-//                    }
-//                })
-//        }
         private fun getPayments(idFlatOwner: Int?) {
             apiRequests.getPaymentsByIdFlatOwner("Bearer ${user.token}", idFlatOwner)
                 .enqueue(object : Callback<JsonArray> {

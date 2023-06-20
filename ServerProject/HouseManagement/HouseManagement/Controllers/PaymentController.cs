@@ -13,7 +13,6 @@ namespace HouseManagement.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PaymentController : ControllerBase
     {
-        // GET: HouseController
         private readonly DBContext _context;
 
         public PaymentController(DBContext context)
@@ -21,14 +20,7 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<PaymentController>
-        [HttpGet]
-        public IEnumerable<Payment> Get()
-        {
-            return _context.Payments;
-        }
-
-        // GET api/<PaymentController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("{id}")]
         public ActionResult<Payment> Get(int id)
         {
@@ -40,6 +32,7 @@ namespace HouseManagement.Controllers
             return item;
         }
 
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("flatowner/{id}")]
         public IEnumerable<Payment> GetPaymentsByIdFlat(int id)
         {
@@ -52,6 +45,7 @@ namespace HouseManagement.Controllers
             return payments;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<Payment> GetPaymentsByAdmin(string id)
         {
@@ -69,19 +63,19 @@ namespace HouseManagement.Controllers
             return payments;
         }
 
-        [HttpGet("house/{id}")]
-        public IEnumerable<Payment> GetPaymentsByHouse(int id)
-        {
-            var flats = _context.Flats.Where(it => it.idHouse == id);
-            var payments = new List<Payment>();
-            foreach (var flat in flats)
-            {
-                payments.AddRange(_context.Payments.Where(it => it.idFlat == flat.id));
-            }
-            return payments;
-        }
+        //[HttpGet("house/{id}")]
+        //public IEnumerable<Payment> GetPaymentsByHouse(int id)
+        //{
+        //    var flats = _context.Flats.Where(it => it.idHouse == id);
+        //    var payments = new List<Payment>();
+        //    foreach (var flat in flats)
+        //    {
+        //        payments.AddRange(_context.Payments.Where(it => it.idFlat == flat.id));
+        //    }
+        //    return payments;
+        //}
 
-        // POST api/<PaymentController>
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPost]
         public ActionResult Post(List<Payment> item)
         {
@@ -115,7 +109,7 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // PUT api/<PaymentController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPut("{id}")]
         public ActionResult<Payment> Put(int id, Payment item)
         {
@@ -134,23 +128,6 @@ namespace HouseManagement.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-        }
-
-        // DELETE api/<PaymentController>/5
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
-        {
-            Payment itemFromBase = _context.Payments.Find(id);
-            if (itemFromBase != null)
-            {
-                _context.Payments.Remove(itemFromBase);
-                _context.SaveChanges();
-                return StatusCode(StatusCodes.Status204NoContent);
-            }
-            else
-            {
-                return BadRequest();
             }
         }
     }

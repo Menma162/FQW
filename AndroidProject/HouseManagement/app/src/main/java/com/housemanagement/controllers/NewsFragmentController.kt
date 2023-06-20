@@ -85,21 +85,18 @@ class NewsFragmentController {
 
         GetDataFromServer.getDateNow(binding.root.context)
         val dateNow = LocalDate.parse(
-            binding.root.context.getSharedPreferences("my_storage", Context.MODE_PRIVATE)
+            binding.root.context.getSharedPreferences("HouseManagement", Context.MODE_PRIVATE)
                 .getString("dateNow", LocalDate.now().toString())
         )
         var textReminderIndication = "Внимание, необходимо передать показания по услугам: "
-        var textReminderPayment = "Внимание, необходимо оплатить начисления по услугам: "
-
         var haveNoIndications = false
-        var haveNoPayments = false
 
         val dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy")
 
         var index: Int = 0
 
         for (service in services) {
-            val settings = settingsServices.firstOrNull { it.id == service.id }
+            val settings = settingsServices.firstOrNull { it.idService == service.id }
             //-начало проверки показаний
             if (settings?.isHaveCounter == true && dateNow.dayOfMonth >= settings.startDateTransfer && dateNow.dayOfMonth <= settings.endDateTransfer) {
                 val countersService = counters.filter { it.idService == service.id }
@@ -139,7 +136,7 @@ class NewsFragmentController {
             news.add(
                 New(
                     index,
-                    "Объявление от " + advertisement.date,
+                    "Объявление от " + advertisement.date.format(dtf),
                     advertisement.description
                 )
             )

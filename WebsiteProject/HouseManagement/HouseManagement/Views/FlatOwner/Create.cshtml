@@ -5,7 +5,11 @@
 }
 
 <h2>Создание владельца квартиры: добавление информации</h2>
-
+<br />
+<div>
+    @Html.ActionLink("Вернуться к выбору дома", "SelectHouse")
+</div>
+<br />
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -60,8 +64,3 @@
         <br>
     </div>
 }
-
-<br />
-<div>
-    @Html.ActionLink("Вернуться к списку", "Index")
-</div>

@@ -6,6 +6,11 @@
 
 <h1>Создание квартиры: Выбор дома</h1>
 
+<br />
+<div>
+    @Html.ActionLink("Вернуться к списку", "Index")
+</div>
+<br />
 <form method="get" action="@Url.Action("SelectHouse", "Counter")">
     <div class="input-group">
         <input type="text" id="search" placeholder="Название" name="search" />

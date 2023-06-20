@@ -9,313 +9,313 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HouseManagement
 build_property.RootNamespace = HouseManagement
-build_property.ProjectDir = C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement\
+build_property.ProjectDir = D:\FQW\WebsiteProject\HouseManagement\HouseManagement\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\tiuri\OneDrive\Рабочий стол\Диплом\web-mvc\HouseManagement\HouseManagement
+build_property.MSBuildProjectDirectory = D:\FQW\WebsiteProject\HouseManagement\HouseManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Account/EditLogin.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Account/EditLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0TG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Account/EditPassword.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Account/EditPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Account/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Account/Login.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Advertisement/Create.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Advertisement/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Advertisement/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Advertisement/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Advertisement/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Advertisement/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Advertisement/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Advertisement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Advertisement/IndexForOwner.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Advertisement/IndexForOwner.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxJbmRleEZvck93bmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Advertisement/SelectHouse.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Advertisement/SelectHouse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2ZXJ0aXNlbWVudFxTZWxlY3RIb3VzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Complaint/Create.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Complaint/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Complaint/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Complaint/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Complaint/EditAdmin.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Complaint/EditAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50XEVkaXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Complaint/EditFlatOwner.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Complaint/EditFlatOwner.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50XEVkaXRGbGF0T3duZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Complaint/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Complaint/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Counter/AddInfoCreate.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Counter/AddInfoCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxBZGRJbmZvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Counter/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Counter/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Counter/Details.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Counter/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Counter/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Counter/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Counter/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Counter/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Counter/SelectFlat.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Counter/SelectFlat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxTZWxlY3RGbGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Counter/SelectHouse.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Counter/SelectHouse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxTZWxlY3RIb3VzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/FlatOwner/Create.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/FlatOwner/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdE93bmVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/FlatOwner/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/FlatOwner/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdE93bmVyXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/FlatOwner/Details.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/FlatOwner/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdE93bmVyXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/FlatOwner/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/FlatOwner/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdE93bmVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/FlatOwner/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/FlatOwner/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdE93bmVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/FlatOwner/SelectHouse.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/FlatOwner/SelectHouse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdE93bmVyXFNlbGVjdEhvdXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Flat/Create.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Flat/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Flat/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Flat/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Flat/Details.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Flat/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Flat/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Flat/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Flat/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Flat/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Flat/SelectFlatOwner.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Flat/SelectFlatOwner.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdFxTZWxlY3RGbGF0T3duZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Flat/SelectHouse.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Flat/SelectHouse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxhdFxTZWxlY3RIb3VzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Home/Privacy.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/House/Create.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/House/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/House/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/House/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2VcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/House/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/House/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/House/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/House/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/IndicationFlatOwner/AddInfoCreate.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/IndicationFlatOwner/AddInfoCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvbkZsYXRPd25lclxBZGRJbmZvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/IndicationFlatOwner/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/IndicationFlatOwner/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvbkZsYXRPd25lclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/IndicationFlatOwner/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/IndicationFlatOwner/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvbkZsYXRPd25lclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/IndicationFlatOwner/SelectCounter.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/IndicationFlatOwner/SelectCounter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvbkZsYXRPd25lclxTZWxlY3RDb3VudGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/IndicationFlatOwner/SelectFlat.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/IndicationFlatOwner/SelectFlat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvbkZsYXRPd25lclxTZWxlY3RGbGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/AddInfoCreate.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/AddInfoCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxBZGRJbmZvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/SelectCounter.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/SelectCounter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxTZWxlY3RDb3VudGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/SelectFlat.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/SelectFlat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxTZWxlY3RGbGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/SelectHouse.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/SelectHouse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxTZWxlY3RIb3VzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/SummaryData.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/SummaryData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxTdW1tYXJ5RGF0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Indication/UntransmittedReadings.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Indication/UntransmittedReadings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaWNhdGlvblxVbnRyYW5zbWl0dGVkUmVhZGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Payment/Create.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Payment/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Payment/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Payment/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Payment/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Payment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Payment/IndexForOwner.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Payment/IndexForOwner.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxJbmRleEZvck93bmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Service/Details.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Service/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Service/Edit.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Service/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Service/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Service/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Service/Setting.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Service/Setting.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTZXR0aW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Shared/Error.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/CreateAdminUser.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/CreateAdminUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGVBZG1pblVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/CreateFlatOwnerUser.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/CreateFlatOwnerUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGVGbGF0T3duZXJVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/Delete.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/EditLogin.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/EditLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0TG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/EditPassword.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/EditPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/Index.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/SelectFlatOwner.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/SelectFlatOwner.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTZWxlY3RGbGF0T3duZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/SelectHouse.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/SelectHouse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTZWxlY3RIb3VzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/User/SelectHouseOne.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/User/SelectHouseOne.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTZWxlY3RIb3VzZU9uZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/_ViewImports.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/_ViewStart.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tiuri/OneDrive/Рабочий стол/Диплом/web-mvc/HouseManagement/HouseManagement/Views/Shared/_Layout.cshtml]
+[D:/FQW/WebsiteProject/HouseManagement/HouseManagement/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-x3r43wzr7k

@@ -21,26 +21,21 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public IEnumerable<Advertisement> Get()
-        {
-            return _context.Advertisements;
-        }
-
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("house/{id}")]
         public IEnumerable<Advertisement> GetByHouse(int id)
         {
-            //var user = 
             return _context.Advertisements.Where(it => it.idHouse == id);
         }
 
-
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("flatowner/{id}")]
         public IEnumerable<Advertisement> GetByIdFlatOwner(int id)
         {
             return _context.Advertisements.Where(it => it.idHouse == (_context.FlatOwners.First(it => it.id == id).idHouse));
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<Advertisement> GetByAdmin(string id)
         {
@@ -53,7 +48,7 @@ namespace HouseManagement.Controllers
             return advertisements;
         }
 
-        // GET api/<AdvertisementController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("{id}")]
         public ActionResult<Advertisement> Get(int id)
         {
@@ -65,7 +60,7 @@ namespace HouseManagement.Controllers
             return item;
         }
 
-        // POST api/<AdvertisementController>
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPost]
         public ActionResult Post(AdvertisementCreateModel item)
         {
@@ -91,7 +86,7 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // PUT api/<AdvertisementController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPut("{id}")]
         public ActionResult<Advertisement> Put(int id, Advertisement item)
         {
@@ -113,7 +108,7 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // DELETE api/<AdvertisementController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {

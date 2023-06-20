@@ -13,7 +13,6 @@ namespace HouseManagement.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class SettingsServiceController : ControllerBase
     {
-        // GET: SettingsServiceController
         private readonly DBContext _context;
 
         public SettingsServiceController(DBContext context)
@@ -21,26 +20,21 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
-        // GET: api/<SettingsServiceController>
-        [HttpGet]
-        public IEnumerable<SettingsService> Get()
-        {
-            return _context.SettingsServices;
-        }
-
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("house/{id}")]
         public IEnumerable<SettingsService> GetByHouse(int id)
         {
             return _context.SettingsServices.Where(it => it.idHouse == id);
         }
 
-
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("flatowner/{id}")]
         public IEnumerable<SettingsService> GetByIdFlatOwner(int id)
         {
             return _context.SettingsServices.Where(it => it.idHouse == (_context.FlatOwners.First(it => it.id == id).idHouse));
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<SettingsService> GetByAdmin(string id)
         {
@@ -53,7 +47,7 @@ namespace HouseManagement.Controllers
             return list;
         }
 
-        // GET api/<SettingsServiceController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("{id}")]
         public ActionResult<SettingsService> Get(int id)
         {
@@ -65,7 +59,7 @@ namespace HouseManagement.Controllers
             return item;
         }
 
-        // POST api/<SettingsServiceController>
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPost]
         public ActionResult Post(List<SettingsService> item)
         {
@@ -82,63 +76,62 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // PUT api/<SettingsServiceController>/5
-        [HttpPut("{id}")]
-        public ActionResult<SettingsService> Put(int id, SettingsService item)
-        {
-            if (id != item.id)
-            {
-                return BadRequest();
-            }
-            if (!_context.SettingsServices.Any(s => s.id == id))
-                return NotFound();
-            if (item.haveCounter == false)
-            {
-                var count = _context.Counters.Where(it => it.idHouse == item.idHouse && it.idService == item.idService && it.used == true).Count();
-                if (count != 0)
-                    return StatusCode(StatusCodes.Status500InternalServerError,
-                        new ResponseModel
-                        {
-                            Status = "Error",
-                            Message = "Изменение невозможно, так как в доме имеются счетчики этого типа, которые еще используются"
-                        });
-            }
-            if (item.typeIMD == false)
-            {
-                var count = _context.Counters.Where(it => it.idHouse == item.idHouse && it.idService == item.idService && it.IMDOrGHMD == true && it.used == true).Count();
-                if (count != 0)
-                    return StatusCode(StatusCodes.Status500InternalServerError,
-                        new ResponseModel
-                        {
-                            Status = "Error",
-                            Message = "Изменение невозможно, так как у квартир имеются счетчики этого типа, которые еще используются"
-                        });
-            }
-            if (item.typeIMD == true)
-            {
-                var count = _context.Counters.Where(it => it.idHouse == item.idHouse && it.idService == item.idService && it.IMDOrGHMD == false && it.used == true).Count();
-                if (count != 0)
-                    return StatusCode(StatusCodes.Status500InternalServerError,
-                        new ResponseModel
-                        {
-                            Status = "Error",
-                            Message = "Изменение невозможно, так как имеются общедомовые счетчики этого типа, которые еще используются"
-                        });
-            }
-            _context.Entry(item).State = EntityState.Modified;
-            try
-            {
-                _context.SaveChanges();
-                return CreatedAtAction(nameof(Get), new { id = item.id }, item);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-        }
+        //[Authorize(Roles = "HouseAdmin")]
+        //[HttpPut("{id}")]
+        //public ActionResult<SettingsService> Put(int id, SettingsService item)
+        //{
+        //    if (id != item.id)
+        //    {
+        //        return BadRequest();
+        //    }
+        //    if (!_context.SettingsServices.Any(s => s.id == id))
+        //        return NotFound();
+        //    if (item.haveCounter == false)
+        //    {
+        //        var count = _context.Counters.Where(it => it.idHouse == item.idHouse && it.idService == item.idService && it.used == true).Count();
+        //        if (count != 0)
+        //            return StatusCode(StatusCodes.Status500InternalServerError,
+        //                new ResponseModel
+        //                {
+        //                    Status = "Error",
+        //                    Message = "Изменение невозможно, так как в доме имеются счетчики этого типа, которые еще используются"
+        //                });
+        //    }
+        //    if (item.typeIMD == false)
+        //    {
+        //        var count = _context.Counters.Where(it => it.idHouse == item.idHouse && it.idService == item.idService && it.IMDOrGHMD == true && it.used == true).Count();
+        //        if (count != 0)
+        //            return StatusCode(StatusCodes.Status500InternalServerError,
+        //                new ResponseModel
+        //                {
+        //                    Status = "Error",
+        //                    Message = "Изменение невозможно, так как у квартир имеются счетчики этого типа, которые еще используются"
+        //                });
+        //    }
+        //    if (item.typeIMD == true)
+        //    {
+        //        var count = _context.Counters.Where(it => it.idHouse == item.idHouse && it.idService == item.idService && it.IMDOrGHMD == false && it.used == true).Count();
+        //        if (count != 0)
+        //            return StatusCode(StatusCodes.Status500InternalServerError,
+        //                new ResponseModel
+        //                {
+        //                    Status = "Error",
+        //                    Message = "Изменение невозможно, так как имеются общедомовые счетчики этого типа, которые еще используются"
+        //                });
+        //    }
+        //    _context.Entry(item).State = EntityState.Modified;
+        //    try
+        //    {
+        //        _context.SaveChanges();
+        //        return CreatedAtAction(nameof(Get), new { id = item.id }, item);
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError);
+        //    }
+        //}
 
-
-        // PUT api/<SettingsServiceController>/5
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPut("{id}/{idAdmin}")]
         public ActionResult<SettingsService> PutByAdmin(int id, string idAdmin, SettingsService item)
         {
@@ -219,6 +212,7 @@ namespace HouseManagement.Controllers
             }
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpPut("admin/{id}")]
         public ActionResult<SettingsService> PutAll(List<SettingsService> item, string id)
         {
@@ -257,23 +251,6 @@ namespace HouseManagement.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-        }
-
-        // DELETE api/<SettingsServiceController>/5
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
-        {
-            SettingsService itemFromBase = _context.SettingsServices.Find(id);
-            if (itemFromBase != null)
-            {
-                _context.SettingsServices.Remove(itemFromBase);
-                _context.SaveChanges();
-                return StatusCode(StatusCodes.Status204NoContent);
-            }
-            else
-            {
-                return BadRequest();
             }
         }
     }

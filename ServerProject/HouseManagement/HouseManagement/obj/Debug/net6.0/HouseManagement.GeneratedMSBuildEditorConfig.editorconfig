@@ -9,13 +9,13 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HouseManagement
 build_property.RootNamespace = HouseManagement
-build_property.ProjectDir = D:\FQW_try\ServerProject\HouseManagement\HouseManagement\
+build_property.ProjectDir = D:\FQW\ServerProject\HouseManagement\HouseManagement\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\FQW_try\ServerProject\HouseManagement\HouseManagement
+build_property.MSBuildProjectDirectory = D:\FQW\ServerProject\HouseManagement\HouseManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FQW_try/ServerProject/HouseManagement/HouseManagement/Views/Home/Index.cshtml]
+[D:/FQW/ServerProject/HouseManagement/HouseManagement/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

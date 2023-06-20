@@ -25,7 +25,7 @@
         <br>
         <div class="form-group">
             <div class="col-md-10">
-                @Html.Label("", "Дом - " + ViewBag.NameHouse, htmlAttributes: new { @class = "control-label col-md-3" })
+                @Html.Label("", "Дом - " + ViewBag.NameHouse, htmlAttributes: new { @class = "control-label" })
             </div>
         </div>
         <br>
@@ -35,12 +35,12 @@
         </div>
 
         <br>
-        @Html.Label("", "Номер квартиры - " + ViewBag.FlatNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.Label("", "Номер квартиры - " + ViewBag.FlatNumber, htmlAttributes: new { @class = "control-label" })
         <br>
-        @Html.Label("", "Описание: " + Model.description, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.Label("", "Описание: " + Model.description, htmlAttributes: new { @class = "control-label" })
         <div class="form-group">
             <div class="col-md-10">
-                @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-1" })
+                @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label" })
                 @Html.DropDownList("newStatus", ViewBag.Statuses as SelectList, new { htmlAttributes = new { @class = "dropdown-toggle", @value=Model.status } })
             </div>
         </div>
@@ -54,7 +54,7 @@
                 }
                 else
                 {
-                    @Html.Label("", "Отсутствует", htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.Label("", "Отсутствует", htmlAttributes: new { @class = "control-labe" })
                 }
             </div>
         </div>

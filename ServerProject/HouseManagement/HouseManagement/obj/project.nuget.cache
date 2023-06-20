@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bbj2DPC0Z10nj4NzobcHtRLQUmQHXVYts7TUAaJ0x5G2wAZa2JD1gs0eI7yauQGIUaXT7xhecGQfpFcerI2zMw==",
+  "dgSpecHash": "D4QW0auqPFnEZuaYtHMDg/8TzP/m/A6AZL1cO6FtQ0wKPCFACoQmHZ2Rg9CJNp3j+KxEOjERq+XKQCapb8fp5g==",
   "success": true,
-  "projectFilePath": "D:\\FQW_try\\ServerProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
+  "projectFilePath": "D:\\FQW\\ServerProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiuri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\tiuri\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -60,30 +60,25 @@ public class CounterViewAdapter extends RecyclerView.Adapter<CounterViewAdapter.
         Service currentService = services.stream().filter (it -> Objects.equals(it.getId(), currentItem.getIdService())).findFirst().get();
         SettingsService settingsService =  settingsServices.stream().filter(it -> Objects.equals(it.getIdService(), currentService.getId())).findFirst().get();
         holder.id = currentItem.getId();
-        holder.flat_number.setText("Квартира №"+ flats.stream().filter (it -> it.getId() == currentItem.getIdFlat()).findFirst().get().getFlatNumber());
+        holder.flat_number.setText("Квартира №"+ flats.stream().filter (it -> Objects.equals(it.getId(), currentItem.getIdFlat())).findFirst().get().getFlatNumber());
         holder.type.setText(currentService.getNameCounter());//тут вывести тип
         holder.number.setText("Счетчик №" + currentItem.getNumber());
         holder.dateOfTransfer.setText("Передать показания с " + settingsService.getStartDateTransfer() + " по " + settingsService.getEndDateTransfer() + " число");
         switch (currentService.getNameCounter()){
             case "Счетчик холодной воды":
                 holder.img.setImageResource(R.drawable.cold_water);
-                //holder.constraintLayout.setBackground(ContextCompat.getDrawable(context, R.drawable.outside_shape_cold_water));
                 break;
             case "Счетчик горячей воды":
                 holder.img.setImageResource(R.drawable.hot_water);
-                //holder.constraintLayout.setBackground(ContextCompat.getDrawable(context, R.drawable.outside_shape_hot_water));
                 break;
             case "Счетчик электроэнергии":
                 holder.img.setImageResource(R.drawable.electricity);
-                //holder.constraintLayout.setBackground(ContextCompat.getDrawable(context, R.drawable.outside_shape_electricity));
                 break;
             case "Счетчик газа":
                 holder.img.setImageResource(R.drawable.gas);
-                //holder.constraintLayout.setBackground(ContextCompat.getDrawable(context, R.drawable.outside_shape_gas));
                 break;
             case "Счетчик отопления":
                 holder.img.setImageResource(R.drawable.warm);
-                //holder.constraintLayout.setBackground(ContextCompat.getDrawable(context, R.drawable.outside_shape_warm));
                 break;
             default:
                 break;

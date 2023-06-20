@@ -16,23 +16,14 @@ namespace HouseManagement.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ComplaintController : ControllerBase
     {
-        // GET: ComplaintController
         private readonly DBContext _context;
-        private readonly IWebHostEnvironment _appEnvironment;
 
-        public ComplaintController(DBContext context, IWebHostEnvironment appEnvironment)
+        public ComplaintController(DBContext context)
         {
             _context = context;
-            _appEnvironment = appEnvironment;
         }
 
-        // GET: api/<ComplaintController>
-        [HttpGet]
-        public IEnumerable<Complaint> Get()
-        {
-            return _context.Complaints;
-        }
-
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("house/{id}")]
         public IEnumerable<Complaint> GetByHouse(int id)
         {
@@ -45,6 +36,7 @@ namespace HouseManagement.Controllers
             return complaints;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("admin/{id}")]
         public IEnumerable<Complaint> GetByAdmin(string id)
         {
@@ -62,7 +54,7 @@ namespace HouseManagement.Controllers
             return complaints;
         }
 
-        // GET api/<ComplaintController>/5
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("{id}")]
         public ActionResult<Complaint> Get(int id)
         {
@@ -74,6 +66,7 @@ namespace HouseManagement.Controllers
             return item;
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("getPhoto/{id}")]
         public async Task<ActionResult<string?>> GetPhotoAsync(int id)
         {
@@ -83,8 +76,9 @@ namespace HouseManagement.Controllers
             return result;
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpGet("getPhotoMobile/{id}")]
-        public async Task<ActionResult<byte[]?>> GetPhotoMobileAsync(int id)
+        public ActionResult<byte[]?> GetPhotoMobileAsync(int id)
         {
             Complaint? item = _context.Complaints.Find(id);
             if (item == null) return NotFound();
@@ -113,6 +107,7 @@ namespace HouseManagement.Controllers
             return null;
         }
 
+        [Authorize(Roles = "FlatOwner")]
         [HttpGet("flatowner/{id}")]
         public IEnumerable<Complaint> GetComplaintsByIdFlat(int id)
         {
@@ -125,8 +120,9 @@ namespace HouseManagement.Controllers
             return complaints;
         }
 
+        [Authorize(Roles = "FlatOwner")]
         [HttpPost]
-        public async Task<ActionResult> PostAsync(Complaint item)
+        public ActionResult PostAsync(Complaint item)
         {
             if (item.id == 0)
             {
@@ -141,8 +137,9 @@ namespace HouseManagement.Controllers
             }
         }
 
+        [Authorize(Roles = "FlatOwner")]
         [HttpPost("mvc")]
-        public async Task<ActionResult> PostMvcAsync(Complaint item)
+        public ActionResult PostMvcAsync(Complaint item)
         {
             if (item.id == 0)
             {
@@ -162,6 +159,7 @@ namespace HouseManagement.Controllers
             }
         }
 
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpPut("photo/{id}")]
         public async Task<ActionResult> PutPhoto(IFormFile photo, int id)
         {
@@ -193,7 +191,6 @@ namespace HouseManagement.Controllers
             }
         }
 
-
         private static async Task<string> Save(string path, IFormFile file, int id)
         {
             string photoName = id.ToString() + ".png";
@@ -204,20 +201,8 @@ namespace HouseManagement.Controllers
             }
             return photoName;
         }
-        private static async Task<string> Save(string path, string base64, int id)
-        {
-            string photoName = id.ToString() + ".png";
-            path += photoName;
-            using (var stream = System.IO.File.Create(path))
-            {
-                var file = Convert.FromBase64String(base64);
-                await System.IO.File.WriteAllBytesAsync(path, file);
-                //await file.CopyToAsync(stream);
-            }
-            return photoName;
-        }
 
-        // PUT api/<ComplaintController>/5
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpPut("{id}")]
         public ActionResult<Complaint> Put(int id, Complaint item)
         {
@@ -242,7 +227,7 @@ namespace HouseManagement.Controllers
             }
         }
 
-        // DELETE api/<ComplaintController>/5
+        [Authorize(Roles = "FlatOwner,HouseAdmin")]
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {

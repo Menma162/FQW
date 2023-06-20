@@ -22,6 +22,7 @@ namespace HouseManagement.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("byflat/{id}")]
         public IEnumerable<FlatOwner> GetByFlat(int id)
         {
@@ -34,6 +35,7 @@ namespace HouseManagement.Controllers
             return flatOwners;
         }
 
+        [Authorize(Roles = "HouseAdmin")]
         [HttpGet("{idFlat}/{idUser}")]
         public IEnumerable<FlatOwner> GetHaveNoFlat(string idUser, int idFlat)
         {
@@ -43,7 +45,7 @@ namespace HouseManagement.Controllers
             return flatOwners;
         }
 
-
+        [Authorize(Roles = "HouseAdmin")]
         [Authorize(Roles = UserRoles.HouseAdmin)]
         [HttpPost("{id}")]
         public ActionResult Post(List<Residence> residences, int id)

@@ -10688,11 +10688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FQW_try\\ServerProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
+      "projectUniqueName": "D:\\FQW\\ServerProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
       "projectName": "HouseManagement",
-      "projectPath": "D:\\FQW_try\\ServerProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
+      "projectPath": "D:\\FQW\\ServerProject\\HouseManagement\\HouseManagement\\HouseManagement.csproj",
       "packagesPath": "C:\\Users\\tiuri\\.nuget\\packages\\",
-      "outputPath": "D:\\FQW_try\\ServerProject\\HouseManagement\\HouseManagement\\obj\\",
+      "outputPath": "D:\\FQW\\ServerProject\\HouseManagement\\HouseManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
